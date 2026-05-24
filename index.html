@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AxOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+      body {
+        background-size: cover;
+        background-color: #F7BB96;
+        padding-top: 78px;
+      }
+      nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: #4E1C1C;
+        font-family: Calibri;
+        font-size: 22px;
+        --bs-link-hover-color: #fff;
+        --bs-link-color: white;
+        box-shadow:0 0px 5px #000000;
+      }
+      .nav-link{
+        color: white;
+        text-align: right;
+      }
+      .nav-item{
+        margin-top: 3px;
+        margin-bottom: 3px;
+      }
+      .nav-link:hover {
+        color: #fff;
+      }
+      .biodata{
+        background-color: rgba(235, 235, 235, 0.514);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        border: none;
+        border-radius: 14px;
+      }
+      h1{
+        font-family: Cambria;
+        color: black;
+        font-size: 50px;
+      }
+      .moto{
+        margin-top: 20px;
+        color: black;
+        font-size: 17px;
+      }
+      .img{
+        width: 300px;
+        height: 300px;
+        border-radius: 2%;
+        margin-top: 20px;
+        align-self: center;
+        font-family: Segoe UI;
+      }
+      .data-diri{
+        background-color: rgba(235, 235, 235, 0.514);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        font-size: 18px;
+        border: none;
+        border-radius: 14px;
+      }
+      .info-card{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+      .info-item{
+        padding:22px;
+        border-radius:14px;
+        background:#df850638;
+        transition:0.3s;
+        border:1px solid transparent;
+        border-left: 7px solid #8D532D;
+      }
+      .info-item:hover{
+        transform:translateY(-5px);
+        border:1px solid #8D532D;
+        box-shadow:0 8px 25px #8D532D;
+        border-left: 7px solid #8D532D;
+      }
+      .label{
+        font-size:14px;
+        font-weight:600;
+        letter-spacing:1px;
+        color:#8D532D;
+        margin-bottom:10px;
+        text-transform:uppercase;
+      }
+      .bar-kecil{
+        margin-top: 40px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .kegiatan {
+        font-size: 12px;
+        padding: 5px 12px;
+        border-radius: 99px;
+        background: #c78d6993;
+        border: 1px solid #be6b37;
+        color: #222222;
+    }
+      .keterangan{
+        font-size:19px;
+        font-weight:600;
+        color:#000000;
+      }
+      .siapa-saya{
+        background-color: rgba(235, 235, 235, 0.514);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        font-size: 18px;
+        border: none;
+        border-radius: 14px;
+      }
+      .perkenalan{
+        margin-left: 20px;
+      }
+      .isi-perkenalan{
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        justify-content: center;
+        color: black;
+        font-size: 18px;
+      }
+      .photo{
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+      }
+      .catatan{
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #444444;
+      }
+      .hubungi-saya{
+        margin-bottom: 30px;
+      }
+      .info-kontak{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        flex-wrap: wrap;
+        padding: 18px 8px;
+      }
+      .contact-item{
+        flex: 0 0 auto;
+      }
+      .kontak{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        width: 120px;
+        height: 120px;
+        font-size: 15px;
+        border-radius: 50%;
+        background: #f0cbb8;
+        border: 2px solid #be6b37;
+        text-decoration: none;
+        transition:0.3s;
+      }
+      .kontak:hover {
+        background: #f0cbb8;
+        border-color: #be6b37;
+        box-shadow: 0 8px 20px rgba(190, 107, 55, 0.749);
+        transform: translateY(-5px);
+        transition: 0.5s;
+      }
+      .kontak-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #222222;
+        text-decoration: none;
+      }
+      .kontak i{
+        font-size: 20px;
+      }
+      .kontak b{
+        font-size: 14px; 
+      }
+    </style>
+  </head>
+  <body id="biodata">
+    <div>
+      <nav>
+        <div class="container d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <img src="logo-1.png" alt="logo" style="width: 96px; height: 54px; margin-top: 4px; margin-bottom: 4px;">
+          </div>
+          <ul class="nav mb-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#biodata"><b>Biodata</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#foto"><b>Foto</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak"><b>Kontak</b></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container mt-5">
+      <div class="row justify-content-center g-4">
+        <div class="col-12 col-md-4">
+          <div class="text-center card p-4 h-100 biodata" id="biodata">
+            <h1><b>BIODATA</b></h1>
+            <img src="profile.png" alt="Profile Picture" class="img">
+            <p class="moto">"Cukup percaya pada waktu yang ada"</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="card p-4 h-100 data-diri">
+            <div class="info-card">
+              <div class="info-item col-md-12">
+                <div class="label"><i class="bi bi-person-fill"></i>  <b>Nama</b></div>
+                <div class="keterangan">Alfaiz Muafy Rizqi Ramadhan</div>
+              </div>
+              <div class="info-item col-md-12">
+                <div class="label"><i class="bi bi-calendar-fill"></i>  <b>Tanggal Lahir</b></div>
+                <div class="keterangan">Yogyakarta, 23 Agustus 2009</div>
+              </div>
+              <div class="info-item col-md-12">
+                <div class="label"><i class="bi bi-book-half"></i>  <b>Sekolah</b></div>
+                <div class="keterangan">SMAN 2 Yogyakarta</div>
+              </div>
+              <div class="info-item col-md-12">
+                <div class="label"><i class="bi bi-heart-fill"></i>  <b>Hobi</b></div>
+                <div class="keterangan">Bermain Game</div>
+              </div>
+              <div class="info-item col-md-12">
+                <div class="label"><i class="bi bi-joystick"></i>  <b>Game Favorit</b></div>
+                <div class="keterangan">Minecraft</div>
+              </div>
+              <div class="info-item col-md-12">
+                <div class="label"><i class="bi bi-apple-music"></i>  <b>Lagu Favorit</b></div>
+                <div class="keterangan">Separuh Aku - Noah</div>
+              </div>
+            </div>
+            <div class="bar-kecil">
+              <span class="kegiatan"><b>🎮 Bermain Game</b></span>
+              <span class="kegiatan"><b>📚 Membaca Fakta</b></span>
+              <span class="kegiatan"><b>💻 Bermain Komputer</b></span>
+              <span class="kegiatan"><b>🎵 Mendengarkan Musik</b></span>
+              <span class="kegiatan"><b>☕ Ngopi</b></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-12">
+          <div class="card p-4 h-100 siapa-saya">
+            <h1 class="perkenalan"><b>SIAPA SAYA?</b></h1>
+            <p class="isi-perkenalan">Halo, perkenalkan saya <b>Alfaiz Muafy Rizqi Ramadhan</b>, biasa di panggil <b>Aal</b>. Saya adalah seorang siswa yang sedang menempuh Pendidikan menengah atas di SMA Negeri 2 Yogyakarta. Saat ini, saya sedang mempelajari banyak hal. Namun, yang menjadi kesukaan saya adalah Matematika, Komputer, dan Ekonomi. Hal tersebut dikarenakan saya tertarik dengan dunia Bitcoin (<i class="bi bi-currency-bitcoin"></i>) yang dimana perlu pemahaman logika dan keuangan untuk memahaminya. Saya sangat terbuka untuk diskusi bersama terkait hal tersebut. Senang bisa bertemu kalian <i class="bi bi-hand-thumbs-up-fill"></i></p>
+          </div>
+        </div>
+        <div class="col-12 col-md-3" id="foto">
+          <div class="card p-4 h-100 data-diri">
+            <img src="photo-1.jpg" alt="Foto-1" class="photo">
+            <i class="catatan">"Saya berfoto di depan Pantai Drini"</i>
+          </div>
+        </div>
+        <div class="col-12 col-md-3" id="foto">
+          <div class="card p-4 h-100 data-diri">
+            <img src="photo-2.jpg" alt="Foto-2" class="photo">
+            <i class="catatan">"Saya setelah buka bersama KANTHI #43"</i>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" id="foto">
+          <div class="card p-4 h-100 data-diri">
+            <img src="photo-3.jpg" alt="Foto-3" class="photo">
+            <i class="catatan" style="margin-top: 20px;">"Saya setelah melihat Pentas Tunggal AtheRielle"</i>
+          </div>
+        </div>
+        <div class="col-12 col-md-12" id="kontak">
+          <div class="card p-4 h-100 data-diri">
+            <h1 class="text-center hubungi-saya"><b>HUBUNGI SAYA</b></h1>
+            <div class="info-kontak">
+              <div class="kontak col-md-12">
+                <a class="kontak-info" href="https://wa.me/6288225149890"><i class="bi bi-whatsapp"></i>  <b>WhatsApp</b></a>
+              </div>
+              <div class="kontak col-md-12">
+                <a class="kontak-info" href="https://www.tiktok.com/@a.faiz_m.fy"><i class="bi bi-tiktok"></i>  <b>Tiktok</b></a>
+              </div>
+              <div class="kontak col-md-12">
+                <a class="kontak-info" href="https://www.instagram.com/a.faiz_m.fy/"><i class="bi bi-instagram"></i>  <b>Instagram</b></a>
+              </div>
+              <div class="kontak col-md-12">
+                <a class="kontak-info" href="https://www.threads.net/@a.faiz_m.fy"><i class="bi bi-threads"></i>  <b>Threads</b></a>
+              </div>
+              <div class="kontak col-md-12">
+                <a class="kontak-info" href="https://x.com/AlaxoCraft"><i class="bi bi-twitter-x"></i>  <b>Twitter X</b></a>
+              </div>
+              <div class="kontak col-md-12">
+                <a class="kontak-info" href="mailto:alaxocraft@gmail.com"><i class="bi bi-envelope"></i>  <b>Email</b></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center mt-4 mb-4 footer">
+      <p style="color: #545454; font-size: 16px;">&copy; 2026 Alfaiz Muafy Rizqi Ramadhan. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
